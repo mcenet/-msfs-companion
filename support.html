@@ -1,21 +1,137 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p2 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Arial; -webkit-text-stroke: #000000}
-    span.s1 {font-kerning: none}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MSFS Companion — Support and Windows Bridge</title>
+  <meta name="description" content="Download the MSFS Companion Bridge for Windows and follow the setup instructions for iPhone and iPad.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f4f7fb;
+      --surface: #ffffff;
+      --text: #172033;
+      --muted: #58657a;
+      --accent: #1565c0;
+      --accent-hover: #0d4f99;
+      --border: #d8e0ec;
+      --notice: #eef5ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0e1420;
+        --surface: #182130;
+        --text: #f4f7fb;
+        --muted: #b7c2d3;
+        --accent: #64a8f5;
+        --accent-hover: #8fc1fa;
+        --border: #324057;
+        --notice: #172b45;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    main { width: min(820px, calc(100% - 32px)); margin: 48px auto; }
+    .card {
+      margin-bottom: 20px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 10px 30px rgba(14, 27, 50, 0.08);
+    }
+    h1, h2 { line-height: 1.2; }
+    h1 { margin: 0 0 10px; font-size: clamp(28px, 5vw, 42px); }
+    h2 { margin: 0 0 14px; font-size: 22px; }
+    p { margin: 0 0 14px; }
+    ol, ul { margin: 0; padding-left: 24px; }
+    li + li { margin-top: 8px; }
+    .lead { color: var(--muted); font-size: 18px; }
+    .button {
+      display: inline-block;
+      margin: 10px 0 12px;
+      padding: 13px 20px;
+      border-radius: 10px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .button:hover, .button:focus { background: var(--accent-hover); }
+    .note {
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--notice);
+    }
+    code { overflow-wrap: anywhere; }
+    a { color: var(--accent); }
+    footer { padding: 4px 6px; color: var(--muted); text-align: center; }
   </style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; font: 24.0px Arial; -webkit-text-stroke: #000000"><span class="s1"><b>Support</b></span></h1>
-<p class="p2"><span class="s1">Thank you for using MSFS Companion.</span></p>
-<p class="p2"><span class="s1">If you need help or want to report a problem, please contact:</span></p>
-<p class="p2"><span class="s1">Email: mcenet@telenet.be</span></p>
-<p class="p2"><span class="s1">We aim to respond as quickly as possible.</span></p>
+  <main>
+    <section class="card">
+      <h1>MSFS Companion Support</h1>
+      <p class="lead">Use the Windows Bridge to connect Microsoft Flight Simulator to MSFS Companion on your iPhone or iPad.</p>
+      <a class="button" href="https://github.com/mcenet/-msfs-companion/releases/latest/download/MSFSCompanionBridgeSetup.exe">Download Windows Bridge</a>
+      <p>Windows 10 or 11, 64-bit · Microsoft Flight Simulator 2024</p>
+    </section>
+
+    <section class="card">
+      <h2>Installation</h2>
+      <ol>
+        <li>Download <strong>MSFSCompanionBridgeSetup.exe</strong> using the button above.</li>
+        <li>Open the downloaded installer and approve the Windows administrator prompt.</li>
+        <li>Complete the installation. The Bridge starts automatically.</li>
+        <li>Wait until the Bridge window displays <strong>Status: Ready</strong>.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Connect your iPhone or iPad</h2>
+      <ol>
+        <li>Connect the Windows PC and iPhone or iPad to the same private Wi-Fi or local network.</li>
+        <li>Start Microsoft Flight Simulator and load a flight.</li>
+        <li>Open MSFS Companion on the iPhone or iPad.</li>
+        <li>The app should discover the Bridge automatically. If needed, use the local address shown in the Bridge window.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Windows Firewall</h2>
+      <p>The installer creates an inbound Windows Firewall rule for TCP port 8081 on <strong>Private</strong> networks. It also enables local network discovery for the app.</p>
+      <div class="note">For your security, make sure your home network is configured as Private in Windows. The installer does not open the Bridge on Public network profiles.</div>
+    </section>
+
+    <section class="card">
+      <h2>Troubleshooting</h2>
+      <ul>
+        <li>Confirm that the Bridge window says <strong>Status: Ready</strong>.</li>
+        <li>Confirm that both devices are connected to the same local network.</li>
+        <li>Disable VPN or guest-network isolation temporarily if discovery does not work.</li>
+        <li>Close and reopen MSFS Companion from the Windows Start menu.</li>
+        <li>Restart the iPhone or iPad app after the Bridge is ready.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Security notice</h2>
+      <p>The current Windows installer is not digitally signed, so Windows may identify the publisher as unknown. Only download the Bridge from this official support page.</p>
+      <p>Release 1.2.2 SHA-256:<br><code>2DCC29FD3962F299E714C0856D025F85D6325AAA6B104A17532DEEEF8954BF65</code></p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>If you need help or want to report a problem, email <a href="mailto:mcenet@telenet.be">mcenet@telenet.be</a>.</p>
+    </section>
+
+    <footer>MSFS Companion · Support for iPhone, iPad and Windows Bridge</footer>
+  </main>
 </body>
 </html>
